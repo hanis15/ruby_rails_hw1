@@ -7,12 +7,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    #render plain: params[:post].inspect
+    render plain: params[:post].inspect
     hash_params = params[:post]
 
     @post = Post.new(:title => hash_params[:title], :author => hash_params[:author], :body => hash_params[:body])
     @post.save
-    redirect_to @post
+    #redirect_to @post
   end
 
   def show
