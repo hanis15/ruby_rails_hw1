@@ -27,4 +27,5 @@ group :development, :test do
 end
 group :production do
   gem 'rails_12factor'
+  gem 'rubocop', require: false  
 end
